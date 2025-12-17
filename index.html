@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netflix Home Page Clone</title>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:#141414;
+      color:#fff;
+    }
+    .navbar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:15px 50px;
+      position:fixed;
+      width:100%;
+      top:0;
+      background:rgba(0,0,0,0.7);
+      z-index:10;
+    }
+
+    .navbar-left{
+      display:flex;
+      align-items:center;
+      gap:30px;
+    }
+
+    .navbar img{
+      width:120px;
+    }
+
+    .navbar a{
+      color:#fff;
+      text-decoration:none;
+      font-size:14px;
+    }
+
+    .navbar-right img{
+      width:35px;
+      border-radius:4px;
+    }
+    .hero{
+      height:90vh;
+      background:linear-gradient(to top, #141414, rgba(0,0,0,0.3)),
+      url('https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/movie.jpg');
+      background-size:cover;
+      background-position:center;
+      padding:200px 50px 0;
+    }
+
+    .hero h1{
+      font-size:3rem;
+      margin-bottom:15px;
+    }
+
+    .hero p{
+      max-width:500px;
+      font-size:1.1rem;
+      margin-bottom:20px;
+    }
+
+    .hero button{
+      padding:10px 25px;
+      font-size:16px;
+      border:none;
+      border-radius:4px;
+      margin-right:10px;
+      cursor:pointer;
+    }
+
+    .play{
+      background:#fff;
+      color:#000;
+    }
+
+    .info{
+      background:rgba(109,109,110,0.7);
+      color:#fff;
+    }
+    .row{
+      padding:20px 50px;
+    }
+
+    .row h2{
+      margin-bottom:10px;
+    }
+
+    .row-posters{
+      display:flex;
+      overflow-x:auto;
+      gap:10px;
+    }
+
+    .row-posters img{
+      width:200px;
+      border-radius:4px;
+      transition:transform 0.3s;
+      cursor:pointer;
+    }
+
+    .row-posters img:hover{
+      transform:scale(1.1);
+    }
+
+    .row-posters::-webkit-scrollbar{
+      display:none;
+    }
+    @media(max-width:768px){
+      .navbar{
+        padding:15px 20px;
+      }
+
+      .navbar-left a{
+        display:none;
+      }
+
+      .hero{
+        padding:150px 20px 0;
+      }
+
+      .hero h1{
+        font-size:2rem;
+      }
+
+      .row{
+        padding:20px;
+      }
+
+      .row-posters img{
+        width:140px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="navbar-left">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg">
+      <a href="#">Home</a>
+      <a href="#">TV Shows</a>
+      <a href="#">Movies</a>
+      <a href="#">New & Popular</a>
+      <a href="#">My List</a>
+    </div>
+    <div class="navbar-right">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png">
+    </div>
+  </div>
+  <div class="hero">
+    <h1>Stranger Things</h1>
+    <p>When a young boy vanishes, a small town uncovers a mystery involving secret experiments and supernatural forces.</p>
+    <button class="play">▶ Play</button>
+    <button class="info">ℹ More Info</button>
+  </div>
+  <div class="row">
+    <h2>Trending Now</h2>
+    <div class="row-posters">
+      <img src="https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg">
+      <img src="https://image.tmdb.org/t/p/w500/r7XifzvtezNt31ypvsmb6Oqxw49.jpg">
+      <img src="https://image.tmdb.org/t/p/w500/9O1Iy9od7JrF2J0cTzJtO6xK6nM.jpg">
+      <img src="https://image.tmdb.org/t/p/w500/6DrHO1jr3qVrViUO6s6kFiAGM7.jpg">
+      <img src="https://image.tmdb.org/t/p/w500/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg">
+    </div>
+  </div>
+
+  <div class="row">
+    <h2>Netflix Originals</h2>
+    <div class="row-posters">
+      <img src="https://image.tmdb.org/t/p/w500/gFZriCkpJYsApPZEF3jhxL4yLzG.jpg">
+      <img src="https://image.tmdb.org/t/p/w500/34nDCQZwaEvsy4CFO5hkGRFDCVU.jpg">
+      <img src="https://image.tmdb.org/t/p/w500/1XSYOP0JjjyMz1irihvWywro82r.jpg">
+      <img src="https://image.tmdb.org/t/p/w500/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg">
+      <img src="https://image.tmdb.org/t/p/w500/u3bZgnGQ9T01sWNhyveQz0wH0Hl.jpg">
+    </div>
+  </div>
+
+</body>
+</html>
