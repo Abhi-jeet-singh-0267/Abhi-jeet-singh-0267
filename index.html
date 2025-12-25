@@ -1,203 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Netflix Home Page Clone</title>
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    body{
-      background:black;
-      color:#fff;
-    }
-    .navbar{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      padding:15px 50px;
-      position:fixed;
-      width:100%;
-      top:0;
-      background:rgba(0,0,0,0.7);
-      z-index:10;
-    }
-
-    .navbar-left{ 
-      display:flex;
-      align-items:center;
-      gap:30px;
-    }
-
-    .navbar img{
-      width:120px;
-    }
-
-    .navbar a{
-      color:white;
-      text-decoration:none;
-      font-size:14px;
-    }
-
-    .navbar-right img{
-      width:35px;
-      border-radius:4px;
-    }
-    .hero{
-      height:90vh;
-      background:linear-gradient(to top, #141414, rgba(0,0,0,0.3)),
-      url('https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/movie.jpg');
-      background-size:cover;
-      background-position:center;
-      padding:200px 50px 0;
-    }
-
-    .hero h1{
-      font-size:3rem;
-      margin-bottom:15px;
-    }
-
-    .hero p{
-      max-width:500px;
-      font-size:1.1rem;
-      margin-bottom:20px;
-    }
-
-    .hero button{
-      padding:10px 25px;
-      font-size:16px;
-      border:none;
-      border-radius:4px;
-      margin-right:10px;
-      cursor:pointer;
-    }
-
-    .play{
-      background:#fff;
-      color:#000;
-    }
-
-    .info{
-      background:rgba(109,109,110,0.7);
-      color:#fff;
-    }
-    .row{
-      padding:20px 50px;
-    }
-
-    .row h2{
-      margin-bottom:10px;
-    }
-
-    .row-posters{
-      display:flex;
-      overflow-x:auto;
-      gap:10px;
-    }
-
-    .row-posters img{
-      width:200px;
-      border-radius:4px;
-      transition:transform 0.3s;
-      cursor:pointer;
-    }
-
-    .row-posters img:hover{
-      transform:scale(1.1);
-    }
-
-    .row-posters::-webkit-scrollbar{
-      display:none;
-    }
-    @media(max-width:768px){
-      .navbar{
-        padding:15px 20px;
-      }
-
-      .navbar-left a{
-        display:none;
-      }
-
-      .hero{
-        padding:150px 20px 0;
-      }
-
-      .hero h1{
-        font-size:2rem;
-      }
-
-      .row{
-        padding:20px;
-      }
-
-      .row-posters img{
-        width:140px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix India – Watch Shows Online, Watch Movies Online</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="navbar">
-    <div class="navbar-left">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg">
-      <a href="#">Home</a>
-      <a href="#">TV Shows</a>
-      <a href="#">Movies</a>
-      <a href="#">New & Popular</a>
-      <a href="#">My List</a>
+   <div class="main">
+    <nav>
+        <span><img  width="53" src="img/Netflix Logo.png" alt=""></span>
+        <div>
+            <button class="btn">English</button>
+            <button class="btn btn-red-sm">Sign-In</button>
+        </div>
+    </nav>
+    <div class="box">
     </div>
-    <div class="navbar-right">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png">
+        <div class="hero">
+            <span> Unlimited movies, shows, and more</span>
+            <span>Starts at ₹149. Cancel at any time.</span>
+            <span>Ready to watch? Enter your email to create or restart your membership.</span>
+            <div class="hero-buttons">
+                <input type="text" placeholder="Email Address">
+                <button class="btn btn-red">Get Started &gt;</button>
+            </div>
+        </div>
+        <div class="separation"></div>
     </div>
-  </div>
-  <div class="hero">
-    <img src="img/1393397.jpg"width="1000" height="500">
-    <h1>Stranger Things</h1>
-    <p>When a young boy vanishes, a small town uncovers a mystery involving secret experiments and supernatural forces.</p>
-    <button class="play">▶ Play</button>
-    <button class="info">ℹ More Info</button>
-  </div>
-  <div class="row">
-    <h2>Trending Now</h2>
-    <div class="row-posters">
-      <img src="https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg">
-      <img src="https://image.tmdb.org/t/p/w500/r7XifzvtezNt31ypvsmb6Oqxw49.jpg">
-      <img src="https://image.tmdb.org/t/p/w500/6DrHO1jr3qVrViUO6s6kFiAGM7.jpg">
-      <img src="https://image.tmdb.org/t/p/w500/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg">
-      <img src="img/imgi_161_avatar_800x1200_208c9665.jpg">
-      <img src="img/imgi_221_189420c3dbf235953dbb719a513f845fe8422135b1008eadc67b8356ee4d2751 (2).jpg">
-      <img src="img/imgi_221_009e8ed1-33fa-46ef-80c2-a02bb9502c9e.jpg">
-      <img src="img/imgi_216_MV5BOGM0NGY3ZmItOGE2ZC00OWIxLTk0N2EtZWY4Yzg3ZDlhNGI3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg">
-      <img src="img/imgi_208_MV5BMzA2NDkwNjAwMl5BMl5BanBnXkFtZTgwNTA2OTYzNjM@._V1_.jpg">
-    </div>
-  </div>
+    <section class="first">
+        <div>
+            <span>Enjoy on your TV</span>
+            <span>Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</span>
+        </div>
+        <div class="secimg">
+            <img src="img/TV.jpg">
+            <video width="320" height="240" autoplay loop muted> 
+            <source src="img/video.mp4" type="video/mp4"> 
+            </video>
+        </div>
+    </section>
+    <div class="separation"></div>
+    <section class="first second">
+        <div class="secimg">
+            <img src="img/Eleven.png">
+        </div>
+         <div>
+            <span>Download your shows to watch offline</span>
+            <span>Save your favourites easily and always have something to watch.</span>
+        </div>
+    </section>
+    <div class="separation"></div>
+    <section class="first">
+        <div>
+            <span>Watch everywhere</span>
+            <span>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</span>
+        </div>
+        <div class="secimg">
+            <img src="img/Watch TV.png">
+             <video width="320" height="240" autoplay loop muted> 
+            <source src="img/Watch-Video.mp4" type="video/mp4"> 
+            </video>
+        </div>
+    </section>
+    <div class="separation"></div>
+    <section class="first">
+        <div class="secimg">
+            <img src="img/Kids.png">
+        </div>
+        <div>
+            <span>Create profiles for kids</span>
+            <span>Send kids on adventures with their favourite characters in a space made just for them — free with your membership.</span>
+        </div>
+    </section>
+    <div class="separation"></div>
+    <section class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faqbox">
+            <span>What is Netflix?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="white" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 4V20M20 12H4" />
+</svg>
+        </div>
+        <div class="faqbox">
+            <span>How much does Netflix cost?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="white" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 4V20M20 12H4" />
+</svg>
+        </div>
+        <div class="faqbox">
+            <span>Where can I watch?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="white" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 4V20M20 12H4" />
+</svg>
+        </div>
+        <div class="faqbox">
+            <span>How do I cancel?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="white" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 4V20M20 12H4" />
+</svg>
+        </div>
+        <div class="faqbox">
+            <span>Where can I watch on Netflix?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="white" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 4V20M20 12H4" />
+</svg>
+        </div>
+        <div class="faqbox">
+            <span>Is Netflix good for kids?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="currentColor" fill="white" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 4V20M20 12H4" />
+</svg>
+        </div>
+    </section>
+    <div class="separation"></div>
+    <footer>
+        <div class="Questions">
+            Questions? Call 000-800-919-1743
+        </div>
+        <div class="footer">
+        <div class="footer-item">
+            <a href="faq">FAQ</a>
+            <a href="faq">Investor Relations</a>
+            <a href="faq">Privacy</a>
+            <a href="faq">Speed Test</a>
+        </div>
 
-  <div class="row">
-    <h2>Netflix Originals</h2>
-    <div class="row-posters">
-      <img src="https://image.tmdb.org/t/p/w500/gFZriCkpJYsApPZEF3jhxL4yLzG.jpg">
-      <img src="https://image.tmdb.org/t/p/w500/34nDCQZwaEvsy4CFO5hkGRFDCVU.jpg">
-      <img src="https://image.tmdb.org/t/p/w500/1XSYOP0JjjyMz1irihvWywro82r.jpg">
-      <img src="https://image.tmdb.org/t/p/w500/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg">
-      <img src="https://image.tmdb.org/t/p/w500/u3bZgnGQ9T01sWNhyveQz0wH0Hl.jpg">
-    </div>
-  </div>
-  <div class="row">
-    <h2>K-Dramaa</h2>
-    <div class="row-posters">
-      <img src="img/imgi_207_caption.jpg">
-      <img src="img/imgi_138_sagal-papa-ravaya_df00cb93b2d27b77c9ed81d31c4c89c5.jpg">
-      <img src="img/Saiyaara.png">
-      <img src="img/Hellbound.jpg">
-      <img src="img/The Glory.jpg">
-      <img src="img/The King Eternal Monarch.jpg">
-    </div>
-  </div>
+        <div class="footer-item">
+            <a href="faq">Help Center</a>
+            <a href="faq">Jobs</a>
+            <a href="faq">Cookies Preferences</a>
+            <a href="faq">Legal Notices</a>
+        </div>
+        <div class="footer-item">
+            <a href="faq">Account</a>
+            <a href="faq">Ways to Watch</a>
+            <a href="faq">Corporate Information</a>
+            <a href="faq">Only on Netflix</a>
+        </div>
 
+        <div class="footer-item">
+            <a href="faq">Media Center</a>
+            <a href="faq">Terms of Use</a>
+            <a href="faq">Contact US</a>
+        </div>
+    </div>
+    </footer>
 </body>
 </html>
